@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+.joinstep1-form{
+    position:absolute; 
+    top:10%; left:25%;
+}
+
+#next-button{
+    position:absolute;
+    left:40%;
+    background-color:#447ab8; 
+    color: #FFFFFF; 
+    padding: 14px 25px; 
+    text-align: center; 
+    text-decoration: none; 
+    font-size: 16px; 
+    margin-left: 15px; 
+    border-radius: 5px;
+    border:1px solid;
+}
+
+#next-button:hover{
+    color:white; 
+    background-color:#1f3c5e; 
+    opacity:1.0;
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+.title{
+    font-family: 'Black Han Sans', sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 44%;
+    font-size: 70px;
+}
+
+div#login-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: 18rem;
+    box-sizing: border-box;
+    border: 1px solid rgb(226, 230, 235);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+input{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border: 1px solid rgb(226, 230, 235);
+    -webkit-border-radius: 8px;
+    border-radius: 8px; 
+    font: bold;
+}
+input[id="loginId"]{
+    top: 23%;
+    left: 50%;
+    width: 14.2rem;
+    height: 3.3rem;
+}
+
+input[type="password"]{
+    top: 42%;
+    left: 50%;
+    width: 14.2rem;
+    height: 3.3rem;
+}
+
+button{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    width: 14.2rem;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba(16, 48, 87, 0.116);
+    border-radius: 8px;
+    border:1px solid rgba(16, 48, 87, 0.116);
+}
+
+div.login_append{
+    position: absolute;
+    top: 75%;
+    left: 18%;
+    width: 14.2rem;
+    height: 2rem;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+input[type="checkbox"]{
+    display: inline;
+    position: relative;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    margin-left:-2px;
+    float: left;
+}
+
+label{
+    position: relative;
+    float: left;
+    margin-left:-3px;
+    margin-top: -4px;
+    margin-right: 10px;
+}
+
+a.link_findId{
+    position: relative;
+    margin-left:35px;
+    float: left;
+    margin-top: -4px;
+}
+
+a.link_findPw{
+    position: relative;
+    margin-left:5px;
+    margin-top: -4px;
+    float: left;
+}
+
+span#line{
+    position: relative;
+    margin-left:2px;
+    margin-top: -4px;
+    float: left;
+}
+
+a.link_join{
+    position: absolute;
+    left: 13%;
+}
+
