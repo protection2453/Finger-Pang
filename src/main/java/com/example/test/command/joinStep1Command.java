@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.command;
 
 import javax.validation.constraints.NotEmpty;
 import javax.persistence.Entity;
@@ -22,9 +22,5 @@ public class joinStep1Command{
     }
     public void setCheck2(boolean check2){
         this.join_check2 = check2;
-    }
-    public void setCheckAll(boolean checkAll){
-        this.join_check1 = checkAll;
-        this.join_check2 = checkAll;
     }
 } 

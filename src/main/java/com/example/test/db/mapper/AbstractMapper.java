@@ -1,4 +1,4 @@
-package com.example.test.dao;
+package com.example.test.db.mapper;
 
 import java.util.List;
 
@@ -6,11 +6,14 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
-/* DB연동 후 적용
-public class AbstractDAO {
-    protected Log log = LogFactory.getLog(AbstractDAO.class); 
-    @Autowired 
+@Repository
+public class AbstractMapper {
+    protected Log log = LogFactory.getLog(AbstractMapper.class); 
+
+    @Autowired
     private SqlSessionTemplate sqlSession; 
     protected void printQueryId(String queryId) { 
         if(log.isDebugEnabled()){ 
@@ -21,6 +24,10 @@ public class AbstractDAO {
         printQueryId(queryId); 
         return sqlSession.insert(queryId, params); 
     } 
+    public void insertMember(String queryId, Object... params){
+        printQueryId(queryId);
+        sqlSession.insert(queryId, params);
+    }
     public Object update(String queryId, Object params){ 
         printQueryId(queryId); 
         return sqlSession.update(queryId, params); 
@@ -48,4 +55,4 @@ public class AbstractDAO {
         return sqlSession.selectList(queryId,params); 
     } 
 }
-*/
+

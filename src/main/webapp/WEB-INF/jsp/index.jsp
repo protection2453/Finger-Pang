@@ -7,6 +7,9 @@
     <a href="/login">로그인</a>
 </li>
 <li>
+    <a href="/join/stepall">회원가입 demo</a>
+</li>
+<li>
     <a href="/join/step1">회원가입(1/2)</a>
 </li>
 <li>

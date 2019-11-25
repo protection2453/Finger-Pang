@@ -8,12 +8,19 @@
 table{
     border: 2px solid lightgray;
     border-radius: 10px;
+    text-align: left;
 }
-
+th{
+    width: 200px;
+    padding-left: 10%;
+}
 input{
     border: 2px solid rgb(192, 190, 190);
     border-radius: 5px;
+    padding-top: 2%;
+    padding-left: 10%;
 }
+
 #next-button2{
     position:absolute;
     vertical-align: auto;

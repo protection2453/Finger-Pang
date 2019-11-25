@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
@@ -7,11 +7,15 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import com.example.exception.IdPasswordNotMatchingException;
+import com.example.test.service.UserService;
+import com.example.test.service.UserServiceImpl;
 import com.example.test.command.LoginCommand;
 import com.example.test.command.joinStep1Command;
 import com.example.test.command.joinStep2Command;
-import com.example.test.dto.AuthInfo;
+import com.example.test.command.joinStepAllCommand;
+import com.example.test.db.dto.AuthInfo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -23,24 +27,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
     // before URL start( start first )
-    @RequestMapping(value="/login", method=RequestMethod.GET)
-    public ModelAndView loginForm(LoginCommand loginCommand,
-                    @CookieValue(value="REMEMBER", required=false) Cookie rememberCookie) throws Exception {
-        
-        if(rememberCookie!=null) {
-            loginCommand.setId(rememberCookie.getValue());
-            loginCommand.setRememberId(true);
-        }
-        
-        ModelAndView mv = new ModelAndView("/loginForm");
-        return mv;
-    }
-    // 주석은 후에 DB연동후 적용
-    /*
-    @Resource(name = "userSer")
-    private UserService userSer;
+    @Autowired
+    @Resource(name="userServiceImpl")
+    private UserServiceImpl userSer;
     
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView loginSuccess(@Valid LoginCommand loginCommand, BindingResult bindingResult, HttpSession session,
             HttpServletResponse response) throws Exception {
@@ -69,7 +60,7 @@ public class LoginController {
         ModelAndView mv = new ModelAndView("/loginForm"); // /mainForm으로 변경 예정
         return mv;
     }
-*/
+
     //logout 
     @RequestMapping(value="/logout", method=RequestMethod.GET)
     public ModelAndView logout(HttpSession session) {

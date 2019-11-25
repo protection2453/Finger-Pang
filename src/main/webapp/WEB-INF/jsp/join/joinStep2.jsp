@@ -31,7 +31,7 @@
                 <tr>
                     <th> 나이</th>
                     <td><select name="age">
-                        <option>선택하세요</option>
+                        <option >선택하세요</option>
                         <option value="20">20</option>
                         <option value="21">21</option>
                         <option value="22">22</option>
