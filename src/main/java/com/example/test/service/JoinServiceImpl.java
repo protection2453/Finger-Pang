@@ -1,24 +1,35 @@
 package com.example.test.service;
 
-import javax.annotation.Resource;
-
-import com.example.test.db.dto.JoinDTO;
+import com.example.test.db.dto.UserDTO;
 import com.example.test.db.mapper.JoinMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Service
-@Repository("joinServiceImpl")
 public class JoinServiceImpl implements JoinService{
-
+    
     @Autowired
-    @Resource(name="joinMapper")
-    public JoinMapper joinMapper;
+    private JoinMapper joinMapper;
+    
+    @Override
+    public String selectNickname(){
+        return joinMapper.selectNickname();
+    }
 
     @Override
-    public void insertMember(JoinDTO joinDTO){
-        joinMapper.insertMember(joinDTO);
+    public String selectId(){
+        return joinMapper.selectId();
     }
+
+    @Override
+    public String selectAll(){
+        return joinMapper.selectAll();
+    }
+    
+    @Override
+    public void insertUser(UserDTO userDTO){
+        joinMapper.insertUser(userDTO);
+    }
+
 }

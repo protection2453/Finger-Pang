@@ -4,7 +4,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.persistence.Entity;
 
 @Entity
-public class joinStep2Command{
+public class JoinStep2Command{
     @NotEmpty(message="전체 동의를 해주세요.(1/2)")
     private boolean join_check1;
 

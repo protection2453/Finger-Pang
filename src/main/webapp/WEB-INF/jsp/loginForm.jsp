@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<link rel="stylesheet" href="/css/text.css">
+<link rel="stylesheet" href="/static/css/text.css">
 <!DOCTYPE html>
 <head>
 <div class="title">핑거팡</div>
